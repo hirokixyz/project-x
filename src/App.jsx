@@ -127,7 +127,8 @@ function handleCreate() {
 
   console.log("FINAL DATA (DB READY):", data);
 
-  alert("جاهز للإرسال 🔥");
+  window.Telegram.WebApp.sendData(JSON.stringify(data));
+
 }
 // ============================================================================= //
 
