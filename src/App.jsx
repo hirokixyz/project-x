@@ -104,7 +104,7 @@ export default function App() {
 function handleCreate() {
   
   const data = {
-    user_id: 1,
+    user_id: window.Telegram?.WebApp?.initDataUnsafe?.user?.id || 0,
 
     collection_id: collections[index].id,
 
