@@ -102,9 +102,6 @@ export default function App() {
 
 // ============================================================================= //
 function handleCreate() {
-
-  console.log("CLICKED");
-  alert("CLICKED");
   
   const data = {
     user_id: 1,
@@ -129,12 +126,9 @@ function handleCreate() {
     created_at: Date.now(),
   };
 
-  console.log("FINAL DATA:", data);
 
-  // 🔥 تحقق مهم
   if (!window.Telegram || !window.Telegram.WebApp) {
     alert("Not inside Telegram ❌");
-    console.log("Telegram object:", window.Telegram);
     return;
   }
 
