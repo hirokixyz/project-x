@@ -20,7 +20,7 @@ export default function Subscription({
 
       {/* Notify */}
       <div className="toggle">
-        <span>Notify about price changes</span>
+        <span>Notify about prices </span>
         <label className="switch">
 
           <input
