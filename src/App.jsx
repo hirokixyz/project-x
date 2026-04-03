@@ -103,7 +103,7 @@ export default function App() {
 // ============================================================================= //
 function handleCreate() {
   const data = {
-    user_id: 1, // 🔥 مؤقت (نربطه لاحقًا)
+    user_id: 1,
 
     collection_id: collections[index].id,
 
@@ -125,10 +125,16 @@ function handleCreate() {
     created_at: Date.now(),
   };
 
-  console.log("FINAL DATA (DB READY):", data);
+  console.log("FINAL DATA:", data);
+
+  // 🔥 تحقق مهم
+  if (!window.Telegram || !window.Telegram.WebApp) {
+    alert("Not inside Telegram ❌");
+    console.log("Telegram object:", window.Telegram);
+    return;
+  }
 
   window.Telegram.WebApp.sendData(JSON.stringify(data));
-
 }
 // ============================================================================= //
 
