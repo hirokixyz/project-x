@@ -102,6 +102,10 @@ export default function App() {
 
 // ============================================================================= //
 function handleCreate() {
+
+  console.log("CLICKED");
+  alert("CLICKED");
+  
   const data = {
     user_id: 1,
 
