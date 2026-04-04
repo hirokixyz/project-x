@@ -604,3 +604,73 @@ button {
 .slider:hover {
   opacity: 0.9;
 }
+
+
+/* ================= SUBSCRIPTIONS ================= */
+
+.sub-card {
+  background: #1c1c1f;
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 12px;
+  border: 1px solid #2a2a2d;
+}
+
+.sub-title {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.sub-info {
+  font-size: 14px;
+  color: #ccc;
+  text-align: center;
+}
+
+.sub-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+/* زر بنفس ستايل المشروع */
+.sub-btn {
+  flex: 1;
+  height: 44px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* نفس create-btn (gold gradient) */
+.sub-btn.edit {
+  background: linear-gradient(135deg, #f5c518, #e6b800);
+  color: black;
+}
+
+/* نفس background الداكن */
+.sub-btn.delete {
+  background: #2a2a2d;
+  color: white;
+}
+
+
+/* ================= SUBSCRIPTIONS GRID ================= */
+
+.sub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+
+.sub-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
