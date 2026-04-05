@@ -9,9 +9,7 @@ export default function App() {
     <div>
       <div style={{ marginBottom: 20 }}>
         <button onClick={() => setPage("create")}>Create</button>
-        <button onClick={() => setPage("subscriptions")}>
-          Subscriptions
-        </button>
+        <button onClick={() => setPage("subscriptions")}>Subscriptions</button>
       </div>
 
       {page === "create" && <Create />}

@@ -23,7 +23,7 @@ export default function Create() {
   const [selectedBackgrounds, setSelectedBackgrounds] = useState([]);
   const [bgSearch, setBgSearch] = useState("");
 
-  const [activeTab, setActiveTab] = useState("models");
+  const [activeTab, setActiveTab] = useState("");
 
   const [notify, setNotify] = useState(false);
   const [autoBuy, setAutoBuy] = useState(false);
@@ -60,8 +60,8 @@ export default function Create() {
       user_id: 735946392,
       collection_id: collections[index].id,
 
-      model_ids: JSON.stringify(selectedModels.map(m => m.id)),
-      backdrop_ids: JSON.stringify(selectedBackgrounds.map(b => b.id)),
+      model_ids: selectedModels.map(m => m.id),
+      backdrop_ids: selectedBackgrounds.map(b => b.id),
 
       notif_enabled: notify ? 1 : 0,
       notif_price: notify ? Number(notifyPrice) : null,
@@ -70,7 +70,6 @@ export default function Create() {
       buy_price: autoBuy ? Number(buyPrice) : null,
       quantity: autoBuy ? Number(buyAmount) : null,
 
-      created_at: Date.now(),
     };
 
     await createRequest(data);

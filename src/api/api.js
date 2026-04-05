@@ -1,4 +1,4 @@
-const BASE_URL = "http://prem-eu4.bot-hosting.net:20428";
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 // إنشاء طلب
 export async function createRequest(data) {
